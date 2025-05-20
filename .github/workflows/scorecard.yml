@@ -1,0 +1,90 @@
+name: Scorecard JSON Generator
+
+on:
+  schedule:
+    - cron: '0 2 * * 1'
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scorecard-json:
+    name: Generate JSON Scorecard
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Set up Git and Pull Latest
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
+          
+      - name: Create .backstage directory
+        run: mkdir -p .backstage
+
+      - name: Run Scorecard in JSON format
+        uses: ossf/scorecard-action@v2.4.1
+        with:
+          results_file: .backstage/scorecard.json
+          results_format: json
+          publish_results: false
+
+      - name: Fetch Dependabot alert count and update scorecard.json
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          REPO="${{ github.repository }}"
+          ALERTS=$(curl -s -H "Authorization: Bearer $GH_TOKEN" \
+              -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/repos/${REPO}/dependabot/alerts?per_page=100")
+
+          # Check if response is an array (starts with [)
+          if echo "$ALERTS" | jq -e 'type=="array"' >/dev/null; then
+            COUNT=$(echo "$ALERTS" | jq '[.[] | select(.state=="open")] | length')
+          else
+            echo "⚠️ Failed to fetch Dependabot alerts properly. Response was:"
+            echo "$ALERTS"
+            COUNT=0
+          fi
+
+          echo "Found $COUNT open Dependabot alerts"
+
+          if [ ! -f .backstage/scorecard.json ]; then
+            echo '{}' > .backstage/scorecard.json
+          fi
+
+          jq --argjson count "$COUNT" '.dependabot_alerts = $count' .backstage/scorecard.json > .backstage/tmp.json && mv .backstage/tmp.json .backstage/scorecard.json
+
+      - name: Compute and inject security_score (based on 5 security checks)
+        run: |
+          SECURITY_SCORE=$(jq '
+            (
+              [.checks[] |
+                select(.name == "Vulnerabilities" or
+                       .name == "Security-Policy" or
+                       .name == "SAST" or
+                       .name == "CI-Tests" or
+                       .name == "Dependency-Update-Tool")
+                | .score] as $scores
+              | if ($scores | length) == 0
+                then 0
+                else ($scores | add / ($scores | length))
+              end
+            )
+          ' .backstage/scorecard.json)
+
+          CLAMPED_SCORE=$(awk -v s="$SECURITY_SCORE" 'BEGIN { if (s<0) print 0; else if (s>10) print 10; else printf "%.1f", s }')
+
+          jq --arg score "$CLAMPED_SCORE" '.security_score = ($score | tonumber)' .backstage/scorecard.json > .backstage/tmp.json && mv .backstage/tmp.json .backstage/scorecard.json
+
+      - name: Commit scorecard.json to repo
+        run: |
+          git add .backstage/scorecard.json
+          git commit -m "Update OpenSSF scorecard with dependabot and security_score [ci skip]" || echo "No changes to commit"
+          git push origin main
