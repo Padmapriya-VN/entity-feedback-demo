@@ -1,8 +1,8 @@
 {
-  "date": "2025-05-26T03:18:50Z",
+  "date": "2025-05-26T10:17:10Z",
   "repo": {
     "name": "github.com/Padmapriya-VN/entity-feedback-demo",
-    "commit": "d2a09dfd14bb520eb13b7e13517dcbea91346158"
+    "commit": "015e67197579588657e13fc0c269f27d9aadd98b"
   },
   "scorecard": {
     "version": "v5.1.1",
@@ -25,31 +25,21 @@
     {
       "details": null,
       "score": 10,
-      "reason": "no binaries found in the repo",
-      "name": "Binary-Artifacts",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#binary-artifacts",
-        "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
-      }
-    },
-    {
-      "details": null,
-      "score": 0,
-      "reason": "Found 0/9 approved changesets -- score normalized to 0",
-      "name": "Code-Review",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#code-review",
-        "short": "Determines if the project requires human code review before pull requests (aka merge requests) are merged."
-      }
-    },
-    {
-      "details": null,
-      "score": 10,
       "reason": "no dangerous workflow patterns detected",
       "name": "Dangerous-Workflow",
       "documentation": {
         "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#dangerous-workflow",
         "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
+      }
+    },
+    {
+      "details": null,
+      "score": -1,
+      "reason": "no pull request found",
+      "name": "CI-Tests",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#ci-tests",
+        "short": "Determines if the project runs tests before pull requests are merged."
       }
     },
     {
@@ -77,28 +67,13 @@
       }
     },
     {
-      "details": [
-        "Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/scorecard.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/Padmapriya-VN/entity-feedback-demo/scorecard.yml/main?enable=pin",
-        "Warn: third-party GitHubAction not pinned by hash: .github/workflows/scorecard.yml:32: update your workflow using https://app.stepsecurity.io/secureworkflow/Padmapriya-VN/entity-feedback-demo/scorecard.yml/main?enable=pin",
-        "Info:   0 out of   1 GitHub-owned GitHubAction dependencies pinned",
-        "Info:   0 out of   1 third-party GitHubAction dependencies pinned"
-      ],
-      "score": 0,
-      "reason": "dependency not pinned by hash detected -- score normalized to 0",
-      "name": "Pinned-Dependencies",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#pinned-dependencies",
-        "short": "Determines if the project has declared and pinned the dependencies of its build process."
-      }
-    },
-    {
       "details": null,
-      "score": -1,
-      "reason": "no pull request found",
-      "name": "CI-Tests",
+      "score": 0,
+      "reason": "Found 0/11 approved changesets -- score normalized to 0",
+      "name": "Code-Review",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#ci-tests",
-        "short": "Determines if the project runs tests before pull requests are merged."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#code-review",
+        "short": "Determines if the project requires human code review before pull requests (aka merge requests) are merged."
       }
     },
     {
@@ -116,12 +91,27 @@
     },
     {
       "details": null,
-      "score": 0,
-      "reason": "no effort to earn an OpenSSF best practices badge detected",
-      "name": "CII-Best-Practices",
+      "score": 10,
+      "reason": "no binaries found in the repo",
+      "name": "Binary-Artifacts",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#cii-best-practices",
-        "short": "Determines if the project has an OpenSSF (formerly CII) Best Practices Badge."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#binary-artifacts",
+        "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
+      }
+    },
+    {
+      "details": [
+        "Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/scorecard.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/Padmapriya-VN/entity-feedback-demo/scorecard.yml/main?enable=pin",
+        "Warn: third-party GitHubAction not pinned by hash: .github/workflows/scorecard.yml:32: update your workflow using https://app.stepsecurity.io/secureworkflow/Padmapriya-VN/entity-feedback-demo/scorecard.yml/main?enable=pin",
+        "Info:   0 out of   1 GitHub-owned GitHubAction dependencies pinned",
+        "Info:   0 out of   1 third-party GitHubAction dependencies pinned"
+      ],
+      "score": 0,
+      "reason": "dependency not pinned by hash detected -- score normalized to 0",
+      "name": "Pinned-Dependencies",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#pinned-dependencies",
+        "short": "Determines if the project has declared and pinned the dependencies of its build process."
       }
     },
     {
@@ -132,6 +122,16 @@
       "documentation": {
         "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#vulnerabilities",
         "short": "Determines if the project has open, known unfixed vulnerabilities."
+      }
+    },
+    {
+      "details": null,
+      "score": 0,
+      "reason": "no effort to earn an OpenSSF best practices badge detected",
+      "name": "CII-Best-Practices",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#cii-best-practices",
+        "short": "Determines if the project has an OpenSSF (formerly CII) Best Practices Badge."
       }
     },
     {
@@ -159,6 +159,18 @@
       }
     },
     {
+      "details": [
+        "Warn: project does not have a license file"
+      ],
+      "score": 0,
+      "reason": "license file not detected",
+      "name": "License",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#license",
+        "short": "Determines if the project has defined a license."
+      }
+    },
+    {
       "details": null,
       "score": -1,
       "reason": "no releases found",
@@ -166,6 +178,18 @@
       "documentation": {
         "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#signed-releases",
         "short": "Determines if the project cryptographically signs release artifacts."
+      }
+    },
+    {
+      "details": [
+        "Warn: branch protection not enabled for branch 'main'"
+      ],
+      "score": 0,
+      "reason": "branch protection not enabled on development/release branches",
+      "name": "Branch-Protection",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#branch-protection",
+        "short": "Determines if the default and release branches are protected with GitHub's branch protection settings."
       }
     },
     {
@@ -181,30 +205,6 @@
       "documentation": {
         "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#security-policy",
         "short": "Determines if the project has published a security policy."
-      }
-    },
-    {
-      "details": [
-        "Warn: project does not have a license file"
-      ],
-      "score": 0,
-      "reason": "license file not detected",
-      "name": "License",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#license",
-        "short": "Determines if the project has defined a license."
-      }
-    },
-    {
-      "details": [
-        "Warn: branch protection not enabled for branch 'main'"
-      ],
-      "score": 0,
-      "reason": "branch protection not enabled on development/release branches",
-      "name": "Branch-Protection",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#branch-protection",
-        "short": "Determines if the default and release branches are protected with GitHub's branch protection settings."
       }
     },
     {
