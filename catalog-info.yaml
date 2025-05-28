@@ -5,6 +5,6 @@ metadata:
   description: Feedback test demo
    
 spec:
-  type: website
+  type: service
   lifecycle: production
   owner: User:default/padmapriyavedagiri.nagarajan.ext
