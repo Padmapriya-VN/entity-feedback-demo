@@ -4,8 +4,8 @@ metadata:
   name: entity-feedback-demo
   description: Feedback test demo
   
-annotations:
-  github.com/project-slug: bayer-int/entity-feedback-demo
+  annotations:
+    github.com/project-slug: bayer-int/entity-feedback-demo
     
 spec:
   type: website
