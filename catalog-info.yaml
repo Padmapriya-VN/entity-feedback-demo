@@ -5,7 +5,7 @@ metadata:
   description: Feedback test demo
   
   annotations:
-    github.com/project-slug: bayer-int/entity-feedback-demo
+    github.com/project-slug: Padmapriya-VN/entity-feedback-demo
     
 spec:
   type: website
