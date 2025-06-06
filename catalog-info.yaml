@@ -3,10 +3,9 @@ kind: Component
 metadata:
   name: entity-feedback-demo
   description: Feedback test demo
-  
   annotations:
     github.com/project-slug: Padmapriya-VN/entity-feedback-demo
-    
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: website
   lifecycle: production
