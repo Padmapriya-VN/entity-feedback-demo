@@ -1,0 +1,12 @@
+site_name: "entity-feedback-demo"
+site_description: "Docs adding to existing repo"
+repo_url: https://github.com/Padmapriya-VN/entity-feedback-demo
+edit_uri: edit/main/docs
+
+nav:
+  - Introduction: index.md
+  - Contributors: contributors.md
+  - Contributing: contributing.md
+
+plugins:
+  - techdocs-core
