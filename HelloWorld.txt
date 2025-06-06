@@ -1,0 +1,9 @@
+Hello World----- by vnp!
+
+This file was created using a Backstage template.
+
+Values:
+parameters.projectName -> values.projectName : test
+parameters.description -> values.description : qqqq
+(parameters.repoUrl | parseRepoUrl)['repo'] -> values.repoName : entity-feedback-demo
+
