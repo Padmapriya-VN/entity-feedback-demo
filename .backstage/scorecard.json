@@ -1,8 +1,8 @@
 {
-  "date": "2025-06-06T13:42:46Z",
+  "date": "2025-06-09T03:24:17Z",
   "repo": {
     "name": "github.com/Padmapriya-VN/entity-feedback-demo",
-    "commit": "05ff2ae6b5e554459e52229cd8f4435851277c14"
+    "commit": "2519706462ff3478f4a76da49153effaca8d7a57"
   },
   "scorecard": {
     "version": "v5.1.1",
@@ -10,16 +10,6 @@
   },
   "score": 2.7,
   "checks": [
-    {
-      "details": null,
-      "score": 10,
-      "reason": "no binaries found in the repo",
-      "name": "Binary-Artifacts",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#binary-artifacts",
-        "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
-      }
-    },
     {
       "details": [
         "Warn: Repository was created in last 90 days."
@@ -40,18 +30,6 @@
       "documentation": {
         "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#dangerous-workflow",
         "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
-      }
-    },
-    {
-      "details": [
-        "Warn: no GitHub/GitLab publishing workflow detected."
-      ],
-      "score": -1,
-      "reason": "packaging workflow not detected",
-      "name": "Packaging",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#packaging",
-        "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
       }
     },
     {
@@ -80,6 +58,28 @@
       }
     },
     {
+      "details": null,
+      "score": 10,
+      "reason": "no binaries found in the repo",
+      "name": "Binary-Artifacts",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#binary-artifacts",
+        "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
+      }
+    },
+    {
+      "details": [
+        "Warn: no GitHub/GitLab publishing workflow detected."
+      ],
+      "score": -1,
+      "reason": "packaging workflow not detected",
+      "name": "Packaging",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#packaging",
+        "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
+      }
+    },
+    {
       "details": [
         "Warn: no topLevel permission defined: .github/workflows/deploy-docs.yml:1",
         "Warn: topLevel 'contents' permission set to 'write': .github/workflows/scorecard.yml:11",
@@ -94,13 +94,15 @@
       }
     },
     {
-      "details": null,
-      "score": 10,
-      "reason": "0 existing vulnerabilities detected",
-      "name": "Vulnerabilities",
+      "details": [
+        "Warn: project does not have a license file"
+      ],
+      "score": 0,
+      "reason": "license file not detected",
+      "name": "License",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#vulnerabilities",
-        "short": "Determines if the project has open, known unfixed vulnerabilities."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#license",
+        "short": "Determines if the project has defined a license."
       }
     },
     {
@@ -115,14 +117,27 @@
     },
     {
       "details": [
-        "Warn: 0 commits out of 4 are checked with a SAST tool"
+        "Warn: no security policy file detected",
+        "Warn: no security file to analyze",
+        "Warn: no security file to analyze",
+        "Warn: no security file to analyze"
       ],
       "score": 0,
-      "reason": "SAST tool is not run on all commits -- score normalized to 0",
-      "name": "SAST",
+      "reason": "security policy file not detected",
+      "name": "Security-Policy",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#sast",
-        "short": "Determines if the project uses static code analysis."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#security-policy",
+        "short": "Determines if the project has published a security policy."
+      }
+    },
+    {
+      "details": null,
+      "score": 10,
+      "reason": "0 existing vulnerabilities detected",
+      "name": "Vulnerabilities",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#vulnerabilities",
+        "short": "Determines if the project has open, known unfixed vulnerabilities."
       }
     },
     {
@@ -149,41 +164,14 @@
     },
     {
       "details": [
-        "Warn: no fuzzer integrations found"
+        "Warn: 0 commits out of 4 are checked with a SAST tool"
       ],
       "score": 0,
-      "reason": "project is not fuzzed",
-      "name": "Fuzzing",
+      "reason": "SAST tool is not run on all commits -- score normalized to 0",
+      "name": "SAST",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#fuzzing",
-        "short": "Determines if the project uses fuzzing."
-      }
-    },
-    {
-      "details": [
-        "Warn: project does not have a license file"
-      ],
-      "score": 0,
-      "reason": "license file not detected",
-      "name": "License",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#license",
-        "short": "Determines if the project has defined a license."
-      }
-    },
-    {
-      "details": [
-        "Warn: no security policy file detected",
-        "Warn: no security file to analyze",
-        "Warn: no security file to analyze",
-        "Warn: no security file to analyze"
-      ],
-      "score": 0,
-      "reason": "security policy file not detected",
-      "name": "Security-Policy",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#security-policy",
-        "short": "Determines if the project has published a security policy."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#sast",
+        "short": "Determines if the project uses static code analysis."
       }
     },
     {
@@ -196,6 +184,18 @@
       "documentation": {
         "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#dependency-update-tool",
         "short": "Determines if the project uses a dependency update tool."
+      }
+    },
+    {
+      "details": [
+        "Warn: no fuzzer integrations found"
+      ],
+      "score": 0,
+      "reason": "project is not fuzzed",
+      "name": "Fuzzing",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#fuzzing",
+        "short": "Determines if the project uses fuzzing."
       }
     },
     {
