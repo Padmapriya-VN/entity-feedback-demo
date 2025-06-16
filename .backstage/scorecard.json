@@ -1,8 +1,8 @@
 {
-  "date": "2025-06-09T03:24:17Z",
+  "date": "2025-06-16T03:24:08Z",
   "repo": {
     "name": "github.com/Padmapriya-VN/entity-feedback-demo",
-    "commit": "2519706462ff3478f4a76da49153effaca8d7a57"
+    "commit": "91a036f7c46628c0a51911db30dff849b65e104d"
   },
   "scorecard": {
     "version": "v5.1.1",
@@ -11,15 +11,13 @@
   "score": 2.7,
   "checks": [
     {
-      "details": [
-        "Warn: Repository was created in last 90 days."
-      ],
-      "score": 0,
-      "reason": "project was created in last 90 days. please review its contents carefully",
-      "name": "Maintained",
+      "details": null,
+      "score": 10,
+      "reason": "no binaries found in the repo",
+      "name": "Binary-Artifacts",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#maintained",
-        "short": "Determines if the project is \"actively maintained\"."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#binary-artifacts",
+        "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
       }
     },
     {
@@ -30,6 +28,18 @@
       "documentation": {
         "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#dangerous-workflow",
         "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
+      }
+    },
+    {
+      "details": [
+        "Warn: no GitHub/GitLab publishing workflow detected."
+      ],
+      "score": -1,
+      "reason": "packaging workflow not detected",
+      "name": "Packaging",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#packaging",
+        "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
       }
     },
     {
@@ -58,25 +68,15 @@
       }
     },
     {
-      "details": null,
-      "score": 10,
-      "reason": "no binaries found in the repo",
-      "name": "Binary-Artifacts",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#binary-artifacts",
-        "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
-      }
-    },
-    {
       "details": [
-        "Warn: no GitHub/GitLab publishing workflow detected."
+        "Warn: Repository was created in last 90 days."
       ],
-      "score": -1,
-      "reason": "packaging workflow not detected",
-      "name": "Packaging",
+      "score": 0,
+      "reason": "project was created in last 90 days. please review its contents carefully",
+      "name": "Maintained",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#packaging",
-        "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#maintained",
+        "short": "Determines if the project is \"actively maintained\"."
       }
     },
     {
@@ -95,28 +95,6 @@
     },
     {
       "details": [
-        "Warn: project does not have a license file"
-      ],
-      "score": 0,
-      "reason": "license file not detected",
-      "name": "License",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#license",
-        "short": "Determines if the project has defined a license."
-      }
-    },
-    {
-      "details": null,
-      "score": 0,
-      "reason": "no effort to earn an OpenSSF best practices badge detected",
-      "name": "CII-Best-Practices",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#cii-best-practices",
-        "short": "Determines if the project has an OpenSSF (formerly CII) Best Practices Badge."
-      }
-    },
-    {
-      "details": [
         "Warn: no security policy file detected",
         "Warn: no security file to analyze",
         "Warn: no security file to analyze",
@@ -131,6 +109,40 @@
       }
     },
     {
+      "details": [
+        "Warn: no dependency update tool configurations found"
+      ],
+      "score": 0,
+      "reason": "no update tool detected",
+      "name": "Dependency-Update-Tool",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#dependency-update-tool",
+        "short": "Determines if the project uses a dependency update tool."
+      }
+    },
+    {
+      "details": null,
+      "score": 0,
+      "reason": "no effort to earn an OpenSSF best practices badge detected",
+      "name": "CII-Best-Practices",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#cii-best-practices",
+        "short": "Determines if the project has an OpenSSF (formerly CII) Best Practices Badge."
+      }
+    },
+    {
+      "details": [
+        "Warn: project does not have a license file"
+      ],
+      "score": 0,
+      "reason": "license file not detected",
+      "name": "License",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#license",
+        "short": "Determines if the project has defined a license."
+      }
+    },
+    {
       "details": null,
       "score": 10,
       "reason": "0 existing vulnerabilities detected",
@@ -138,6 +150,30 @@
       "documentation": {
         "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#vulnerabilities",
         "short": "Determines if the project has open, known unfixed vulnerabilities."
+      }
+    },
+    {
+      "details": [
+        "Warn: 0 commits out of 4 are checked with a SAST tool"
+      ],
+      "score": 0,
+      "reason": "SAST tool is not run on all commits -- score normalized to 0",
+      "name": "SAST",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#sast",
+        "short": "Determines if the project uses static code analysis."
+      }
+    },
+    {
+      "details": [
+        "Warn: no fuzzer integrations found"
+      ],
+      "score": 0,
+      "reason": "project is not fuzzed",
+      "name": "Fuzzing",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#fuzzing",
+        "short": "Determines if the project uses fuzzing."
       }
     },
     {
@@ -163,39 +199,13 @@
       }
     },
     {
-      "details": [
-        "Warn: 0 commits out of 4 are checked with a SAST tool"
-      ],
+      "details": null,
       "score": 0,
-      "reason": "SAST tool is not run on all commits -- score normalized to 0",
-      "name": "SAST",
+      "reason": "project has 0 contributing companies or organizations -- score normalized to 0",
+      "name": "Contributors",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#sast",
-        "short": "Determines if the project uses static code analysis."
-      }
-    },
-    {
-      "details": [
-        "Warn: no dependency update tool configurations found"
-      ],
-      "score": 0,
-      "reason": "no update tool detected",
-      "name": "Dependency-Update-Tool",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#dependency-update-tool",
-        "short": "Determines if the project uses a dependency update tool."
-      }
-    },
-    {
-      "details": [
-        "Warn: no fuzzer integrations found"
-      ],
-      "score": 0,
-      "reason": "project is not fuzzed",
-      "name": "Fuzzing",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#fuzzing",
-        "short": "Determines if the project uses fuzzing."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#contributors",
+        "short": "Determines if the project has a set of contributors from multiple organizations (e.g., companies)."
       }
     },
     {
@@ -206,16 +216,6 @@
       "documentation": {
         "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#ci-tests",
         "short": "Determines if the project runs tests before pull requests are merged."
-      }
-    },
-    {
-      "details": null,
-      "score": 0,
-      "reason": "project has 0 contributing companies or organizations -- score normalized to 0",
-      "name": "Contributors",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#contributors",
-        "short": "Determines if the project has a set of contributors from multiple organizations (e.g., companies)."
       }
     }
   ],
