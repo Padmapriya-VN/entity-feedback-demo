@@ -1,8 +1,8 @@
 {
-  "date": "2025-07-14T03:43:24Z",
+  "date": "2025-07-21T03:46:44Z",
   "repo": {
     "name": "github.com/Padmapriya-VN/entity-feedback-demo",
-    "commit": "4ab64567c8023dec348c186312ce98f6f406a594"
+    "commit": "04a2acb42d8d2d5049113438dbbdb8c3243ac72f"
   },
   "scorecard": {
     "version": "v5.1.1",
@@ -11,15 +11,23 @@
   "score": 2.7,
   "checks": [
     {
-      "details": [
-        "Warn: no GitHub/GitLab publishing workflow detected."
-      ],
-      "score": -1,
-      "reason": "packaging workflow not detected",
-      "name": "Packaging",
+      "details": null,
+      "score": 0,
+      "reason": "Found 0/28 approved changesets -- score normalized to 0",
+      "name": "Code-Review",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#packaging",
-        "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#code-review",
+        "short": "Determines if the project requires human code review before pull requests (aka merge requests) are merged."
+      }
+    },
+    {
+      "details": null,
+      "score": 10,
+      "reason": "no binaries found in the repo",
+      "name": "Binary-Artifacts",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#binary-artifacts",
+        "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
       }
     },
     {
@@ -38,12 +46,12 @@
     },
     {
       "details": null,
-      "score": 0,
-      "reason": "Found 0/28 approved changesets -- score normalized to 0",
-      "name": "Code-Review",
+      "score": 10,
+      "reason": "no dangerous workflow patterns detected",
+      "name": "Dangerous-Workflow",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#code-review",
-        "short": "Determines if the project requires human code review before pull requests (aka merge requests) are merged."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#dangerous-workflow",
+        "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
       }
     },
     {
@@ -62,26 +70,6 @@
       }
     },
     {
-      "details": null,
-      "score": 10,
-      "reason": "no binaries found in the repo",
-      "name": "Binary-Artifacts",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#binary-artifacts",
-        "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
-      }
-    },
-    {
-      "details": null,
-      "score": 10,
-      "reason": "no dangerous workflow patterns detected",
-      "name": "Dangerous-Workflow",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#dangerous-workflow",
-        "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
-      }
-    },
-    {
       "details": [
         "Warn: Repository was created in last 90 days."
       ],
@@ -91,6 +79,55 @@
       "documentation": {
         "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#maintained",
         "short": "Determines if the project is \"actively maintained\"."
+      }
+    },
+    {
+      "details": [
+        "Warn: no GitHub/GitLab publishing workflow detected."
+      ],
+      "score": -1,
+      "reason": "packaging workflow not detected",
+      "name": "Packaging",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#packaging",
+        "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
+      }
+    },
+    {
+      "details": [
+        "Warn: no security policy file detected",
+        "Warn: no security file to analyze",
+        "Warn: no security file to analyze",
+        "Warn: no security file to analyze"
+      ],
+      "score": 0,
+      "reason": "security policy file not detected",
+      "name": "Security-Policy",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#security-policy",
+        "short": "Determines if the project has published a security policy."
+      }
+    },
+    {
+      "details": [
+        "Warn: no dependency update tool configurations found"
+      ],
+      "score": 0,
+      "reason": "no update tool detected",
+      "name": "Dependency-Update-Tool",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#dependency-update-tool",
+        "short": "Determines if the project uses a dependency update tool."
+      }
+    },
+    {
+      "details": null,
+      "score": 10,
+      "reason": "0 existing vulnerabilities detected",
+      "name": "Vulnerabilities",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#vulnerabilities",
+        "short": "Determines if the project has open, known unfixed vulnerabilities."
       }
     },
     {
@@ -105,24 +142,12 @@
     },
     {
       "details": null,
-      "score": 10,
-      "reason": "0 existing vulnerabilities detected",
-      "name": "Vulnerabilities",
+      "score": -1,
+      "reason": "no releases found",
+      "name": "Signed-Releases",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#vulnerabilities",
-        "short": "Determines if the project has open, known unfixed vulnerabilities."
-      }
-    },
-    {
-      "details": [
-        "Warn: 0 commits out of 4 are checked with a SAST tool"
-      ],
-      "score": 0,
-      "reason": "SAST tool is not run on all commits -- score normalized to 0",
-      "name": "SAST",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#sast",
-        "short": "Determines if the project uses static code analysis."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#signed-releases",
+        "short": "Determines if the project cryptographically signs release artifacts."
       }
     },
     {
@@ -151,39 +176,14 @@
     },
     {
       "details": [
-        "Warn: no dependency update tool configurations found"
+        "Warn: 0 commits out of 4 are checked with a SAST tool"
       ],
       "score": 0,
-      "reason": "no update tool detected",
-      "name": "Dependency-Update-Tool",
+      "reason": "SAST tool is not run on all commits -- score normalized to 0",
+      "name": "SAST",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#dependency-update-tool",
-        "short": "Determines if the project uses a dependency update tool."
-      }
-    },
-    {
-      "details": null,
-      "score": -1,
-      "reason": "no releases found",
-      "name": "Signed-Releases",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#signed-releases",
-        "short": "Determines if the project cryptographically signs release artifacts."
-      }
-    },
-    {
-      "details": [
-        "Warn: no security policy file detected",
-        "Warn: no security file to analyze",
-        "Warn: no security file to analyze",
-        "Warn: no security file to analyze"
-      ],
-      "score": 0,
-      "reason": "security policy file not detected",
-      "name": "Security-Policy",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#security-policy",
-        "short": "Determines if the project has published a security policy."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#sast",
+        "short": "Determines if the project uses static code analysis."
       }
     },
     {
