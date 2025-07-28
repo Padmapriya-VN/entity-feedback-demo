@@ -1,8 +1,8 @@
 {
-  "date": "2025-07-21T03:46:44Z",
+  "date": "2025-07-28T03:48:15Z",
   "repo": {
     "name": "github.com/Padmapriya-VN/entity-feedback-demo",
-    "commit": "04a2acb42d8d2d5049113438dbbdb8c3243ac72f"
+    "commit": "035317a2b0ef7ec1040b311d8ab649a6e7e2a1bb"
   },
   "scorecard": {
     "version": "v5.1.1",
@@ -23,11 +23,23 @@
     {
       "details": null,
       "score": 10,
-      "reason": "no binaries found in the repo",
-      "name": "Binary-Artifacts",
+      "reason": "no dangerous workflow patterns detected",
+      "name": "Dangerous-Workflow",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#binary-artifacts",
-        "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#dangerous-workflow",
+        "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
+      }
+    },
+    {
+      "details": [
+        "Warn: Repository was created in last 90 days."
+      ],
+      "score": 0,
+      "reason": "project was created in last 90 days. please review its contents carefully",
+      "name": "Maintained",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#maintained",
+        "short": "Determines if the project is \"actively maintained\"."
       }
     },
     {
@@ -42,16 +54,6 @@
       "documentation": {
         "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#token-permissions",
         "short": "Determines if the project's workflows follow the principle of least privilege."
-      }
-    },
-    {
-      "details": null,
-      "score": 10,
-      "reason": "no dangerous workflow patterns detected",
-      "name": "Dangerous-Workflow",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#dangerous-workflow",
-        "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
       }
     },
     {
@@ -71,18 +73,6 @@
     },
     {
       "details": [
-        "Warn: Repository was created in last 90 days."
-      ],
-      "score": 0,
-      "reason": "project was created in last 90 days. please review its contents carefully",
-      "name": "Maintained",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#maintained",
-        "short": "Determines if the project is \"actively maintained\"."
-      }
-    },
-    {
-      "details": [
         "Warn: no GitHub/GitLab publishing workflow detected."
       ],
       "score": -1,
@@ -94,30 +84,13 @@
       }
     },
     {
-      "details": [
-        "Warn: no security policy file detected",
-        "Warn: no security file to analyze",
-        "Warn: no security file to analyze",
-        "Warn: no security file to analyze"
-      ],
-      "score": 0,
-      "reason": "security policy file not detected",
-      "name": "Security-Policy",
+      "details": null,
+      "score": 10,
+      "reason": "no binaries found in the repo",
+      "name": "Binary-Artifacts",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#security-policy",
-        "short": "Determines if the project has published a security policy."
-      }
-    },
-    {
-      "details": [
-        "Warn: no dependency update tool configurations found"
-      ],
-      "score": 0,
-      "reason": "no update tool detected",
-      "name": "Dependency-Update-Tool",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#dependency-update-tool",
-        "short": "Determines if the project uses a dependency update tool."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#binary-artifacts",
+        "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
       }
     },
     {
@@ -132,6 +105,16 @@
     },
     {
       "details": null,
+      "score": -1,
+      "reason": "no releases found",
+      "name": "Signed-Releases",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#signed-releases",
+        "short": "Determines if the project cryptographically signs release artifacts."
+      }
+    },
+    {
+      "details": null,
       "score": 0,
       "reason": "no effort to earn an OpenSSF best practices badge detected",
       "name": "CII-Best-Practices",
@@ -141,13 +124,15 @@
       }
     },
     {
-      "details": null,
-      "score": -1,
-      "reason": "no releases found",
-      "name": "Signed-Releases",
+      "details": [
+        "Warn: no fuzzer integrations found"
+      ],
+      "score": 0,
+      "reason": "project is not fuzzed",
+      "name": "Fuzzing",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#signed-releases",
-        "short": "Determines if the project cryptographically signs release artifacts."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#fuzzing",
+        "short": "Determines if the project uses fuzzing."
       }
     },
     {
@@ -164,14 +149,14 @@
     },
     {
       "details": [
-        "Warn: no fuzzer integrations found"
+        "Warn: no dependency update tool configurations found"
       ],
       "score": 0,
-      "reason": "project is not fuzzed",
-      "name": "Fuzzing",
+      "reason": "no update tool detected",
+      "name": "Dependency-Update-Tool",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#fuzzing",
-        "short": "Determines if the project uses fuzzing."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#dependency-update-tool",
+        "short": "Determines if the project uses a dependency update tool."
       }
     },
     {
@@ -199,13 +184,18 @@
       }
     },
     {
-      "details": null,
+      "details": [
+        "Warn: no security policy file detected",
+        "Warn: no security file to analyze",
+        "Warn: no security file to analyze",
+        "Warn: no security file to analyze"
+      ],
       "score": 0,
-      "reason": "project has 0 contributing companies or organizations -- score normalized to 0",
-      "name": "Contributors",
+      "reason": "security policy file not detected",
+      "name": "Security-Policy",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#contributors",
-        "short": "Determines if the project has a set of contributors from multiple organizations (e.g., companies)."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#security-policy",
+        "short": "Determines if the project has published a security policy."
       }
     },
     {
@@ -216,6 +206,16 @@
       "documentation": {
         "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#ci-tests",
         "short": "Determines if the project runs tests before pull requests are merged."
+      }
+    },
+    {
+      "details": null,
+      "score": 0,
+      "reason": "project has 0 contributing companies or organizations -- score normalized to 0",
+      "name": "Contributors",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#contributors",
+        "short": "Determines if the project has a set of contributors from multiple organizations (e.g., companies)."
       }
     }
   ],
