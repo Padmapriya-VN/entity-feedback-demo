@@ -9,4 +9,4 @@ metadata:
 spec:
   type: website
   lifecycle: production
-  owner: User:default/padmapriya-vn
+  owner: group:backstage-contributors
