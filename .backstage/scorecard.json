@@ -1,8 +1,8 @@
 {
-  "date": "2025-09-29T03:07:52Z",
+  "date": "2025-10-06T03:05:05Z",
   "repo": {
     "name": "github.com/Padmapriya-VN/entity-feedback-demo",
-    "commit": "337a3e8b604903fb3af2e93fe1b2b61aed99d27b"
+    "commit": "526a9e20055bde27509d9bb76b53ee8907180365"
   },
   "scorecard": {
     "version": "v5.1.1",
@@ -18,51 +18,6 @@
       "documentation": {
         "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#maintained",
         "short": "Determines if the project is \"actively maintained\"."
-      }
-    },
-    {
-      "details": null,
-      "score": 10,
-      "reason": "no dangerous workflow patterns detected",
-      "name": "Dangerous-Workflow",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#dangerous-workflow",
-        "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
-      }
-    },
-    {
-      "details": null,
-      "score": 10,
-      "reason": "no binaries found in the repo",
-      "name": "Binary-Artifacts",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#binary-artifacts",
-        "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
-      }
-    },
-    {
-      "details": [
-        "Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/scorecard.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/Padmapriya-VN/entity-feedback-demo/scorecard.yml/main?enable=pin",
-        "Warn: third-party GitHubAction not pinned by hash: .github/workflows/scorecard.yml:32: update your workflow using https://app.stepsecurity.io/secureworkflow/Padmapriya-VN/entity-feedback-demo/scorecard.yml/main?enable=pin",
-        "Info:   0 out of   1 GitHub-owned GitHubAction dependencies pinned",
-        "Info:   0 out of   1 third-party GitHubAction dependencies pinned"
-      ],
-      "score": 0,
-      "reason": "dependency not pinned by hash detected -- score normalized to 0",
-      "name": "Pinned-Dependencies",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#pinned-dependencies",
-        "short": "Determines if the project has declared and pinned the dependencies of its build process."
-      }
-    },
-    {
-      "details": null,
-      "score": 0,
-      "reason": "Found 0/28 approved changesets -- score normalized to 0",
-      "name": "Code-Review",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#code-review",
-        "short": "Determines if the project requires human code review before pull requests (aka merge requests) are merged."
       }
     },
     {
@@ -94,11 +49,83 @@
     {
       "details": null,
       "score": 10,
+      "reason": "no dangerous workflow patterns detected",
+      "name": "Dangerous-Workflow",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#dangerous-workflow",
+        "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
+      }
+    },
+    {
+      "details": [
+        "Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/scorecard.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/Padmapriya-VN/entity-feedback-demo/scorecard.yml/main?enable=pin",
+        "Warn: third-party GitHubAction not pinned by hash: .github/workflows/scorecard.yml:32: update your workflow using https://app.stepsecurity.io/secureworkflow/Padmapriya-VN/entity-feedback-demo/scorecard.yml/main?enable=pin",
+        "Info:   0 out of   1 GitHub-owned GitHubAction dependencies pinned",
+        "Info:   0 out of   1 third-party GitHubAction dependencies pinned"
+      ],
+      "score": 0,
+      "reason": "dependency not pinned by hash detected -- score normalized to 0",
+      "name": "Pinned-Dependencies",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#pinned-dependencies",
+        "short": "Determines if the project has declared and pinned the dependencies of its build process."
+      }
+    },
+    {
+      "details": null,
+      "score": 0,
+      "reason": "Found 0/28 approved changesets -- score normalized to 0",
+      "name": "Code-Review",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#code-review",
+        "short": "Determines if the project requires human code review before pull requests (aka merge requests) are merged."
+      }
+    },
+    {
+      "details": null,
+      "score": 10,
+      "reason": "no binaries found in the repo",
+      "name": "Binary-Artifacts",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#binary-artifacts",
+        "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
+      }
+    },
+    {
+      "details": [
+        "Warn: no dependency update tool configurations found"
+      ],
+      "score": 0,
+      "reason": "no update tool detected",
+      "name": "Dependency-Update-Tool",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#dependency-update-tool",
+        "short": "Determines if the project uses a dependency update tool."
+      }
+    },
+    {
+      "details": null,
+      "score": 10,
       "reason": "0 existing vulnerabilities detected",
       "name": "Vulnerabilities",
       "documentation": {
         "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#vulnerabilities",
         "short": "Determines if the project has open, known unfixed vulnerabilities."
+      }
+    },
+    {
+      "details": [
+        "Warn: no security policy file detected",
+        "Warn: no security file to analyze",
+        "Warn: no security file to analyze",
+        "Warn: no security file to analyze"
+      ],
+      "score": 0,
+      "reason": "security policy file not detected",
+      "name": "Security-Policy",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#security-policy",
+        "short": "Determines if the project has published a security policy."
       }
     },
     {
@@ -125,18 +152,6 @@
     },
     {
       "details": [
-        "Warn: no fuzzer integrations found"
-      ],
-      "score": 0,
-      "reason": "project is not fuzzed",
-      "name": "Fuzzing",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#fuzzing",
-        "short": "Determines if the project uses fuzzing."
-      }
-    },
-    {
-      "details": [
         "Warn: project does not have a license file"
       ],
       "score": 0,
@@ -149,29 +164,14 @@
     },
     {
       "details": [
-        "Warn: no security policy file detected",
-        "Warn: no security file to analyze",
-        "Warn: no security file to analyze",
-        "Warn: no security file to analyze"
+        "Warn: no fuzzer integrations found"
       ],
       "score": 0,
-      "reason": "security policy file not detected",
-      "name": "Security-Policy",
+      "reason": "project is not fuzzed",
+      "name": "Fuzzing",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#security-policy",
-        "short": "Determines if the project has published a security policy."
-      }
-    },
-    {
-      "details": [
-        "Warn: no dependency update tool configurations found"
-      ],
-      "score": 0,
-      "reason": "no update tool detected",
-      "name": "Dependency-Update-Tool",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#dependency-update-tool",
-        "short": "Determines if the project uses a dependency update tool."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#fuzzing",
+        "short": "Determines if the project uses fuzzing."
       }
     },
     {
@@ -199,21 +199,21 @@
     {
       "details": null,
       "score": 0,
-      "reason": "project has 0 contributing companies or organizations -- score normalized to 0",
-      "name": "Contributors",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#contributors",
-        "short": "Determines if the project has a set of contributors from multiple organizations (e.g., companies)."
-      }
-    },
-    {
-      "details": null,
-      "score": 0,
       "reason": "0 out of 2 merged PRs checked by a CI test -- score normalized to 0",
       "name": "CI-Tests",
       "documentation": {
         "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#ci-tests",
         "short": "Determines if the project runs tests before pull requests are merged."
+      }
+    },
+    {
+      "details": null,
+      "score": 0,
+      "reason": "project has 0 contributing companies or organizations -- score normalized to 0",
+      "name": "Contributors",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#contributors",
+        "short": "Determines if the project has a set of contributors from multiple organizations (e.g., companies)."
       }
     }
   ],
