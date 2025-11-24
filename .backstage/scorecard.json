@@ -1,8 +1,8 @@
 {
-  "date": "2025-11-17T03:20:09Z",
+  "date": "2025-11-24T03:36:36Z",
   "repo": {
     "name": "github.com/Padmapriya-VN/entity-feedback-demo",
-    "commit": "6084304ffe5109a438070abbc48360e1374c3753"
+    "commit": "5043dbf2f446f5cdef9173fdc5e81aaea32020ba"
   },
   "scorecard": {
     "version": "v5.1.1",
@@ -32,28 +32,6 @@
     },
     {
       "details": [
-        "Warn: no GitHub/GitLab publishing workflow detected."
-      ],
-      "score": -1,
-      "reason": "packaging workflow not detected",
-      "name": "Packaging",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#packaging",
-        "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
-      }
-    },
-    {
-      "details": null,
-      "score": 10,
-      "reason": "no binaries found in the repo",
-      "name": "Binary-Artifacts",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#binary-artifacts",
-        "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
-      }
-    },
-    {
-      "details": [
         "Warn: GitHub-owned GitHubAction not pinned by hash: .github/workflows/scorecard.yml:20: update your workflow using https://app.stepsecurity.io/secureworkflow/Padmapriya-VN/entity-feedback-demo/scorecard.yml/main?enable=pin",
         "Warn: third-party GitHubAction not pinned by hash: .github/workflows/scorecard.yml:32: update your workflow using https://app.stepsecurity.io/secureworkflow/Padmapriya-VN/entity-feedback-demo/scorecard.yml/main?enable=pin",
         "Info:   0 out of   1 GitHub-owned GitHubAction dependencies pinned",
@@ -65,6 +43,16 @@
       "documentation": {
         "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#pinned-dependencies",
         "short": "Determines if the project has declared and pinned the dependencies of its build process."
+      }
+    },
+    {
+      "details": null,
+      "score": 10,
+      "reason": "no binaries found in the repo",
+      "name": "Binary-Artifacts",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#binary-artifacts",
+        "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
       }
     },
     {
@@ -93,14 +81,29 @@
     },
     {
       "details": [
-        "Warn: project does not have a license file"
+        "Warn: no GitHub/GitLab publishing workflow detected."
+      ],
+      "score": -1,
+      "reason": "packaging workflow not detected",
+      "name": "Packaging",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#packaging",
+        "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
+      }
+    },
+    {
+      "details": [
+        "Warn: no security policy file detected",
+        "Warn: no security file to analyze",
+        "Warn: no security file to analyze",
+        "Warn: no security file to analyze"
       ],
       "score": 0,
-      "reason": "license file not detected",
-      "name": "License",
+      "reason": "security policy file not detected",
+      "name": "Security-Policy",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#license",
-        "short": "Determines if the project has defined a license."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#security-policy",
+        "short": "Determines if the project has published a security policy."
       }
     },
     {
@@ -124,6 +127,28 @@
       }
     },
     {
+      "details": null,
+      "score": -1,
+      "reason": "no releases found",
+      "name": "Signed-Releases",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#signed-releases",
+        "short": "Determines if the project cryptographically signs release artifacts."
+      }
+    },
+    {
+      "details": [
+        "Warn: 0 commits out of 2 are checked with a SAST tool"
+      ],
+      "score": 0,
+      "reason": "SAST tool is not run on all commits -- score normalized to 0",
+      "name": "SAST",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#sast",
+        "short": "Determines if the project uses static code analysis."
+      }
+    },
+    {
       "details": [
         "Warn: no dependency update tool configurations found"
       ],
@@ -137,36 +162,24 @@
     },
     {
       "details": [
-        "Warn: 0 commits out of 3 are checked with a SAST tool"
+        "Warn: project does not have a license file"
       ],
       "score": 0,
-      "reason": "SAST tool is not run on all commits -- score normalized to 0",
-      "name": "SAST",
+      "reason": "license file not detected",
+      "name": "License",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#sast",
-        "short": "Determines if the project uses static code analysis."
-      }
-    },
-    {
-      "details": [
-        "Warn: branch protection not enabled for branch 'main'"
-      ],
-      "score": 0,
-      "reason": "branch protection not enabled on development/release branches",
-      "name": "Branch-Protection",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#branch-protection",
-        "short": "Determines if the default and release branches are protected with GitHub's branch protection settings."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#license",
+        "short": "Determines if the project has defined a license."
       }
     },
     {
       "details": null,
-      "score": -1,
-      "reason": "no releases found",
-      "name": "Signed-Releases",
+      "score": 0,
+      "reason": "0 out of 1 merged PRs checked by a CI test -- score normalized to 0",
+      "name": "CI-Tests",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#signed-releases",
-        "short": "Determines if the project cryptographically signs release artifacts."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#ci-tests",
+        "short": "Determines if the project runs tests before pull requests are merged."
       }
     },
     {
@@ -183,27 +196,14 @@
     },
     {
       "details": [
-        "Warn: no security policy file detected",
-        "Warn: no security file to analyze",
-        "Warn: no security file to analyze",
-        "Warn: no security file to analyze"
+        "Warn: branch protection not enabled for branch 'main'"
       ],
       "score": 0,
-      "reason": "security policy file not detected",
-      "name": "Security-Policy",
+      "reason": "branch protection not enabled on development/release branches",
+      "name": "Branch-Protection",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#security-policy",
-        "short": "Determines if the project has published a security policy."
-      }
-    },
-    {
-      "details": null,
-      "score": 0,
-      "reason": "0 out of 2 merged PRs checked by a CI test -- score normalized to 0",
-      "name": "CI-Tests",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#ci-tests",
-        "short": "Determines if the project runs tests before pull requests are merged."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#branch-protection",
+        "short": "Determines if the default and release branches are protected with GitHub's branch protection settings."
       }
     },
     {
