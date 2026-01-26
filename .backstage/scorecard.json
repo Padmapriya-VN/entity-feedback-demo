@@ -1,8 +1,8 @@
 {
-  "date": "2026-01-19T03:54:16Z",
+  "date": "2026-01-26T04:00:25Z",
   "repo": {
     "name": "github.com/Padmapriya-VN/entity-feedback-demo",
-    "commit": "540df239c09c286271479e0c42626fdbfe6fa5ab"
+    "commit": "0b8c3070d8a2ad1ded616db4ab213e4f09009cf1"
   },
   "scorecard": {
     "version": "v5.1.1",
@@ -13,11 +13,11 @@
     {
       "details": null,
       "score": 10,
-      "reason": "12 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10",
-      "name": "Maintained",
+      "reason": "no binaries found in the repo",
+      "name": "Binary-Artifacts",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#maintained",
-        "short": "Determines if the project is \"actively maintained\"."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#binary-artifacts",
+        "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
       }
     },
     {
@@ -33,13 +33,17 @@
       }
     },
     {
-      "details": null,
-      "score": 10,
-      "reason": "no binaries found in the repo",
-      "name": "Binary-Artifacts",
+      "details": [
+        "Warn: no topLevel permission defined: .github/workflows/deploy-docs.yml:1",
+        "Warn: topLevel 'contents' permission set to 'write': .github/workflows/scorecard.yml:11",
+        "Info: no jobLevel write permissions found"
+      ],
+      "score": 0,
+      "reason": "detected GitHub workflow tokens with excessive permissions",
+      "name": "Token-Permissions",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#binary-artifacts",
-        "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#token-permissions",
+        "short": "Determines if the project's workflows follow the principle of least privilege."
       }
     },
     {
@@ -53,15 +57,13 @@
       }
     },
     {
-      "details": [
-        "Warn: no pull requests merged into dev branch"
-      ],
-      "score": 0,
-      "reason": "no SAST tool detected",
-      "name": "SAST",
+      "details": null,
+      "score": 10,
+      "reason": "no dangerous workflow patterns detected",
+      "name": "Dangerous-Workflow",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#sast",
-        "short": "Determines if the project uses static code analysis."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#dangerous-workflow",
+        "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
       }
     },
     {
@@ -72,6 +74,18 @@
       "documentation": {
         "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#code-review",
         "short": "Determines if the project requires human code review before pull requests (aka merge requests) are merged."
+      }
+    },
+    {
+      "details": [
+        "Warn: no pull requests merged into dev branch"
+      ],
+      "score": 0,
+      "reason": "no SAST tool detected",
+      "name": "SAST",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#sast",
+        "short": "Determines if the project uses static code analysis."
       }
     },
     {
@@ -92,40 +106,11 @@
     {
       "details": null,
       "score": 10,
-      "reason": "no dangerous workflow patterns detected",
-      "name": "Dangerous-Workflow",
+      "reason": "12 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10",
+      "name": "Maintained",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#dangerous-workflow",
-        "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
-      }
-    },
-    {
-      "details": [
-        "Warn: no topLevel permission defined: .github/workflows/deploy-docs.yml:1",
-        "Warn: topLevel 'contents' permission set to 'write': .github/workflows/scorecard.yml:11",
-        "Info: no jobLevel write permissions found"
-      ],
-      "score": 0,
-      "reason": "detected GitHub workflow tokens with excessive permissions",
-      "name": "Token-Permissions",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#token-permissions",
-        "short": "Determines if the project's workflows follow the principle of least privilege."
-      }
-    },
-    {
-      "details": [
-        "Warn: no security policy file detected",
-        "Warn: no security file to analyze",
-        "Warn: no security file to analyze",
-        "Warn: no security file to analyze"
-      ],
-      "score": 0,
-      "reason": "security policy file not detected",
-      "name": "Security-Policy",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#security-policy",
-        "short": "Determines if the project has published a security policy."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#maintained",
+        "short": "Determines if the project is \"actively maintained\"."
       }
     },
     {
@@ -161,6 +146,18 @@
       }
     },
     {
+      "details": [
+        "Warn: branch protection not enabled for branch 'main'"
+      ],
+      "score": 0,
+      "reason": "branch protection not enabled on development/release branches",
+      "name": "Branch-Protection",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#branch-protection",
+        "short": "Determines if the default and release branches are protected with GitHub's branch protection settings."
+      }
+    },
+    {
       "details": null,
       "score": -1,
       "reason": "no releases found",
@@ -172,14 +169,17 @@
     },
     {
       "details": [
-        "Warn: no fuzzer integrations found"
+        "Warn: no security policy file detected",
+        "Warn: no security file to analyze",
+        "Warn: no security file to analyze",
+        "Warn: no security file to analyze"
       ],
       "score": 0,
-      "reason": "project is not fuzzed",
-      "name": "Fuzzing",
+      "reason": "security policy file not detected",
+      "name": "Security-Policy",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#fuzzing",
-        "short": "Determines if the project uses fuzzing."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#security-policy",
+        "short": "Determines if the project has published a security policy."
       }
     },
     {
@@ -195,6 +195,18 @@
       }
     },
     {
+      "details": [
+        "Warn: no fuzzer integrations found"
+      ],
+      "score": 0,
+      "reason": "project is not fuzzed",
+      "name": "Fuzzing",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#fuzzing",
+        "short": "Determines if the project uses fuzzing."
+      }
+    },
+    {
       "details": null,
       "score": 0,
       "reason": "project has 0 contributing companies or organizations -- score normalized to 0",
@@ -202,18 +214,6 @@
       "documentation": {
         "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#contributors",
         "short": "Determines if the project has a set of contributors from multiple organizations (e.g., companies)."
-      }
-    },
-    {
-      "details": [
-        "Warn: branch protection not enabled for branch 'main'"
-      ],
-      "score": 0,
-      "reason": "branch protection not enabled on development/release branches",
-      "name": "Branch-Protection",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#branch-protection",
-        "short": "Determines if the default and release branches are protected with GitHub's branch protection settings."
       }
     }
   ],
