@@ -1,8 +1,8 @@
 {
-  "date": "2026-05-04T05:38:57Z",
+  "date": "2026-05-11T06:03:12Z",
   "repo": {
     "name": "github.com/Padmapriya-VN/entity-feedback-demo",
-    "commit": "9d5da4f95b82c797871cb5d9ff2f4638a874f157"
+    "commit": "afa4964e2452a43e0b4eb78a932d80e487cac095"
   },
   "scorecard": {
     "version": "v5.1.1",
@@ -12,12 +12,12 @@
   "checks": [
     {
       "details": null,
-      "score": -1,
-      "reason": "no pull request found",
-      "name": "CI-Tests",
+      "score": 10,
+      "reason": "12 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10",
+      "name": "Maintained",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#ci-tests",
-        "short": "Determines if the project runs tests before pull requests are merged."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#maintained",
+        "short": "Determines if the project is \"actively maintained\"."
       }
     },
     {
@@ -41,6 +41,38 @@
       }
     },
     {
+      "details": null,
+      "score": 0,
+      "reason": "Found 0/30 approved changesets -- score normalized to 0",
+      "name": "Code-Review",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#code-review",
+        "short": "Determines if the project requires human code review before pull requests (aka merge requests) are merged."
+      }
+    },
+    {
+      "details": [
+        "Warn: no GitHub/GitLab publishing workflow detected."
+      ],
+      "score": -1,
+      "reason": "packaging workflow not detected",
+      "name": "Packaging",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#packaging",
+        "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
+      }
+    },
+    {
+      "details": null,
+      "score": -1,
+      "reason": "no pull request found",
+      "name": "CI-Tests",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#ci-tests",
+        "short": "Determines if the project runs tests before pull requests are merged."
+      }
+    },
+    {
       "details": [
         "Warn: no pull requests merged into dev branch"
       ],
@@ -50,6 +82,20 @@
       "documentation": {
         "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#sast",
         "short": "Determines if the project uses static code analysis."
+      }
+    },
+    {
+      "details": [
+        "Warn: no topLevel permission defined: .github/workflows/deploy-docs.yml:1",
+        "Warn: topLevel 'contents' permission set to 'write': .github/workflows/scorecard.yml:11",
+        "Info: no jobLevel write permissions found"
+      ],
+      "score": 0,
+      "reason": "detected GitHub workflow tokens with excessive permissions",
+      "name": "Token-Permissions",
+      "documentation": {
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#token-permissions",
+        "short": "Determines if the project's workflows follow the principle of least privilege."
       }
     },
     {
@@ -69,48 +115,12 @@
     },
     {
       "details": null,
-      "score": 0,
-      "reason": "Found 0/30 approved changesets -- score normalized to 0",
-      "name": "Code-Review",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#code-review",
-        "short": "Determines if the project requires human code review before pull requests (aka merge requests) are merged."
-      }
-    },
-    {
-      "details": null,
       "score": 10,
-      "reason": "12 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10",
-      "name": "Maintained",
+      "reason": "0 existing vulnerabilities detected",
+      "name": "Vulnerabilities",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#maintained",
-        "short": "Determines if the project is \"actively maintained\"."
-      }
-    },
-    {
-      "details": [
-        "Warn: no GitHub/GitLab publishing workflow detected."
-      ],
-      "score": -1,
-      "reason": "packaging workflow not detected",
-      "name": "Packaging",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#packaging",
-        "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
-      }
-    },
-    {
-      "details": [
-        "Warn: no topLevel permission defined: .github/workflows/deploy-docs.yml:1",
-        "Warn: topLevel 'contents' permission set to 'write': .github/workflows/scorecard.yml:11",
-        "Info: no jobLevel write permissions found"
-      ],
-      "score": 0,
-      "reason": "detected GitHub workflow tokens with excessive permissions",
-      "name": "Token-Permissions",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#token-permissions",
-        "short": "Determines if the project's workflows follow the principle of least privilege."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#vulnerabilities",
+        "short": "Determines if the project has open, known unfixed vulnerabilities."
       }
     },
     {
@@ -136,13 +146,18 @@
       }
     },
     {
-      "details": null,
-      "score": 10,
-      "reason": "0 existing vulnerabilities detected",
-      "name": "Vulnerabilities",
+      "details": [
+        "Warn: no security policy file detected",
+        "Warn: no security file to analyze",
+        "Warn: no security file to analyze",
+        "Warn: no security file to analyze"
+      ],
+      "score": 0,
+      "reason": "security policy file not detected",
+      "name": "Security-Policy",
       "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#vulnerabilities",
-        "short": "Determines if the project has open, known unfixed vulnerabilities."
+        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#security-policy",
+        "short": "Determines if the project has published a security policy."
       }
     },
     {
@@ -165,21 +180,6 @@
       "documentation": {
         "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#signed-releases",
         "short": "Determines if the project cryptographically signs release artifacts."
-      }
-    },
-    {
-      "details": [
-        "Warn: no security policy file detected",
-        "Warn: no security file to analyze",
-        "Warn: no security file to analyze",
-        "Warn: no security file to analyze"
-      ],
-      "score": 0,
-      "reason": "security policy file not detected",
-      "name": "Security-Policy",
-      "documentation": {
-        "url": "https://github.com/ossf/scorecard/blob/cd152cb6742c5b8f2f3d2b5193b41d9c50905198/docs/checks.md#security-policy",
-        "short": "Determines if the project has published a security policy."
       }
     },
     {
